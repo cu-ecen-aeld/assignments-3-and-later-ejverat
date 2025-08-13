@@ -16,6 +16,8 @@ CROSS_COMPILE=${CROSS_COMPILE_BASE}-
 TOOLCHAIN_PATH=$(dirname $(which ${CROSS_COMPILE}gcc))
 TOOLCHAIN_PATH=${TOOLCHAIN_PATH%/bin}
 
+echo "CROSS_COMPILE=${CROSS_COMPILE}"
+
 if [ $# -lt 1 ]
 then
 	echo "Using default directory ${OUTDIR} for output"
